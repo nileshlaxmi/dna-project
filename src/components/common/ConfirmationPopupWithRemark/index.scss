@@ -1,0 +1,30 @@
+@import '../../../assets/scss/mixin.scss';
+@import '../../../assets/scss/variable.scss';
+
+.confirmation-root {
+  .popup-content {
+    border: 1px solid $rajah !important;
+  }
+  .AlertIcon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12%;
+    background-color: $white;
+    margin-top: 1rem;
+  }
+  .confirmation-content {
+    text-align: center;
+    .confirmation-title {
+      color: $purple;
+      @include fontWeightLight;
+      font-size: 1rem;
+    }
+    .confirmation-subtitle {
+      color: $label-black;
+      @include fontWeightRegular;
+      font-size: 14px;
+      padding: 15px 0;
+    }
+  }
+}

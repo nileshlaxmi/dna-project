@@ -1,0 +1,74 @@
+import React from 'react';
+
+const Pause = ({ fillColor }) => {
+  return (
+    <svg
+      width="36"
+      height="36"
+      viewBox="0 0 36 36"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g filter="url(#filter0_d)">
+        <circle cx="18" cy="17" r="16" fill="white" />
+      </g>
+      <circle
+        cx="18"
+        cy="17"
+        r="9"
+        stroke={fillColor}
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M15.5801 13.42V20.58"
+        stroke={fillColor}
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M20.4199 13.42V20.58"
+        stroke={fillColor}
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <defs>
+        <filter
+          id="filter0_d"
+          x="0"
+          y="0"
+          width="36"
+          height="36"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feOffset dy="1" />
+          <feGaussianBlur stdDeviation="1" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow"
+            result="shape"
+          />
+        </filter>
+      </defs>
+    </svg>
+  );
+};
+
+export default Pause;

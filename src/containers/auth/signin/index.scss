@@ -1,0 +1,80 @@
+@import '../../../assets/scss/mixin.scss';
+@import '../../../assets/scss/variable.scss';
+
+@mixin resetLabel {
+  padding-right: 0;
+  width: 100%;
+  text-align: start;
+  align-self: unset;
+  margin-bottom: 4px;
+}
+
+.auth-form {
+  background-image: url(../../../assets/images/Login_page_image.png);
+  @include auth-background;
+  @include vertical-align;
+
+  &__inner {
+    @include login-box;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  &__body {
+    &--small {
+      text-align: center;
+      margin-bottom: 16px;
+      color: $label-black;
+      font-size: 1.125rem;
+      @include fontWeightRegular;
+    }
+
+    .form-input {
+      &__page-property-block {
+        display: block;
+        padding: 0;
+        margin-bottom: 16px;
+      }
+      &__label-field {
+        @include resetLabel;
+      }
+      &__form-control {
+        border-radius: 0.15rem;
+        padding: 1.5rem 0.81rem;
+        &--disabled {
+          border-radius: 0.15rem;
+          padding: 1.5rem 0.81rem;
+        }
+        &--error {
+          border-radius: 0.15rem;
+          padding: 1.5rem 0.81rem;
+        }
+      }
+    }
+  }
+  .sign-in-btn {
+    font-size: 1rem;
+    padding: 0.57rem;
+  }
+
+  .forgot-password {
+    color: $btn-base;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.error {
+  color: $error-text;
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+}

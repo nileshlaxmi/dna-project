@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="39px" viewBox="0 0 38 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 63.1 (101010) - https://sketch.com -->
+    <title>8E63867A-A455-4CD8-B2A6-BAB8EC33CAD7@1.5x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <filter x="-3.4%" y="-5.0%" width="106.7%" height="110.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="008" transform="translate(-701.000000, -194.000000)">
+            <g id="alert" filter="url(#filter-1)" transform="translate(540.000000, 139.000000)">
+                <g transform="translate(164.000000, 56.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                    <path d="M16,31.21 C9.9083004,31.21 4.41738753,27.5377181 2.09089355,21.9077776 C-0.235600435,16.2778371 1.06120447,9.80065957 5.37584779,5.50035062 C9.69049111,1.20004166 16.1719483,-0.0752014574 21.7941155,2.27001483 C27.4162828,4.61523112 31.0702382,10.118334 31.0500836,16.21 C31.0115101,24.4977847 24.2878669,31.1990902 16,31.21 Z M16,2.63 C8.52758733,2.63 2.47,8.68758733 2.47,16.16 C2.47,23.6324127 8.52758733,29.69 16,29.69 C23.4724127,29.69 29.53,23.6324127 29.53,16.16 C29.5189855,8.69215446 23.4678455,2.64101454 16,2.63 Z" id="Shape" fill="#FACA69" fill-rule="nonzero"></path>
+                    <path d="M16,18.23 C15.5802636,18.23 15.24,17.8897364 15.24,17.47 L15.24,9.67 C15.24,9.25026359 15.5802636,8.91 16,8.91 C16.4197364,8.91 16.76,9.25026359 16.76,9.67 L16.76,17.47 C16.76,17.6715645 16.6799288,17.8648735 16.5374012,18.0074012 C16.3948735,18.1499288 16.2015645,18.23 16,18.23 L16,18.23 Z" id="Path" fill="#FACA69" fill-rule="nonzero"></path>
+                    <circle id="Oval" fill="#FACA69" fill-rule="nonzero" cx="16" cy="21.8" r="1.18"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,66 @@
+@import '../../../assets/scss/mixin.scss';
+@import '../../../assets/scss/variable.scss';
+
+.breadcrumb-container {
+  .root-icon {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.25rem;
+    background-color: $breadcrum-gray;
+    @include vertical-align;
+    margin-right: 10px;
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  .next-icon {
+    width: 18px;
+    height: 18px;
+    @include vertical-align;
+    margin: 0 5px;
+    img {
+      width: 12px;
+      transform: rotate(-90deg);
+    }
+  }
+  ol.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    padding: 0.75rem 1rem;
+    list-style: none;
+    border-radius: 0.25rem;
+    li {
+      max-width: 250px;
+      @include ellipsis;
+      font-size: 12px;
+      line-height: 1.5rem;
+      display: flex;
+      align-items: center;
+      a {
+        color: $label;
+        font-size: 12px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .active {
+      color: $purple;
+    }
+    .link {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .breadcrumb-container {
+    display: none;
+  }
+}

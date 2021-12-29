@@ -1,0 +1,67 @@
+@import '../../../../assets/scss/mixin.scss';
+@import '../../../../assets/scss/variable.scss';
+
+.filter-chips {
+  // background: $white;
+  // border: 1px solid $border-grey;
+  // border-radius: 0.15rem;
+  // margin-bottom: 30px;
+  .chips-container {
+    // padding: 4px;
+  }
+  input {
+    width: 100% !important;
+    border: none !important;
+  }
+  .form-input__input-field {
+    margin-bottom: 0;
+  }
+  .error-box-wrap {
+    position: relative;
+    .error-box-message {
+      position: absolute;
+      top: 4px;
+      left: -2px;
+    }
+  }
+  .tag-item {
+    color: $input-text;
+    background-color: $white;
+    font-size: 0.75rem;
+    border: 1px solid $gainsboro;
+    border-radius: 30px;
+    height: 30px;
+    // padding: 0 1rem 0 1rem;
+    display: inline-flex;
+    align-items: center;
+    margin: 0.25rem 0.25rem 0.25rem 0;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 .5rem;
+    .chip-text{
+      // width: calc(100% - 1.25rem);
+      // @include ellipsis;
+      padding: 0 .5rem;
+      text-transform: capitalize;
+    }
+    button {
+      color: $input-text;
+    }
+  }
+
+  .chip-icon {
+    @include vertical-align;
+    background-color: $white;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    // margin-left: 10px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    padding: 0;
+    line-height: 1;
+  }
+}

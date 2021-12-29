@@ -1,0 +1,89 @@
+@import '../../../../assets/scss/variable.scss';
+@import '../../../../assets/scss/mixin.scss';
+
+.form-input {
+  &__page-property-block {
+    display: flex;
+    flex-direction: row;
+    padding: 0 8px 8px 8px;
+  }
+  &__property-block {
+    display: flex;
+    flex-direction: row;
+  }
+  &__label-field {
+    @include label-field;
+    &--mandatory {
+      @include mandatory;
+    }
+  }
+
+  &__form-control {
+    @include input-field;
+    background-color: $white;
+    color: $input-text;
+
+    &--disabled {
+      @include input-field;
+      background-color: $border-grey;
+      color: $input-text;
+      opacity: 0.7;
+    }
+    &--error {
+      @include input-field;
+      background-color: $white;
+      color: $input-text;
+      border: 1px solid $error-text !important;
+    }
+  }
+
+  &__input-field {
+    flex-grow: 1;
+    &--subtitle {
+      @include fontWeightRegular;
+      font-size: 0.75rem;
+      margin-bottom: 0.25rem;
+    }
+
+    input {
+      &:focus {
+        @include form-focus;
+      }
+    }
+  }
+
+  .input-field {
+    position: relative;
+    &.icon-space {
+      input {
+        padding-right: 40px;
+      }
+    }
+    &.icon-link {
+      img {
+        cursor: pointer;
+      }
+    }
+    img {
+      width: 18px;
+      height: 100%;
+      position: absolute;
+      right: 8px;
+      top: 0px;
+    }
+    input[type='search']::-webkit-search-decoration,
+    input[type='search']::-webkit-search-cancel-button,
+    input[type='search']::-webkit-search-results-button,
+    input[type='search']::-webkit-search-results-decoration {
+      display: none;
+    }
+  }
+  .domain-link-text {
+    color: $calender-green;
+    @include fontWeightBold;
+  }
+}
+
+.top-border {
+  border-top: 1px solid $gainsboro;
+}

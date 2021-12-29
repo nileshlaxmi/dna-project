@@ -1,0 +1,67 @@
+@import '../../assets/scss/mixin.scss';
+@import '../../assets/scss/variable.scss';
+
+.access-denied {
+  height: 100vh;
+  width: 100%;
+  background-color: $white;
+  @include vertical-align;
+  .page-body{
+    @include vertical-align;
+    flex-wrap: wrap-reverse;
+    margin: 1rem;
+    .message{
+      margin: .5rem;
+      width: 420px;
+      display: flex;
+      flex-wrap: wrap;
+      .title{
+        font-size: 2.5rem;
+        color: $purple;
+        margin-bottom: .5rem;
+      }
+      .subtitle{
+        font-size: 1.8rem;
+      }
+    }
+    .image-wrapper{
+      width: 405px;
+      margin: .5rem;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  .access-denied {
+    .page-body{
+      .message{
+        width: 320px;
+        .title{
+          font-size: 1.5rem;
+        }
+        .subtitle{
+          font-size: 1rem;
+        }
+      }
+      .image-wrapper{
+        width: 320px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .access-denied {
+    .page-body{
+      .message{
+        width: 100%;
+      }
+      .image-wrapper{
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,234 @@
+@import './mixin.scss';
+@import './variable.scss';
+@import './font.scss';
+
+* {
+  label {
+    margin-bottom: 0;
+  }
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+  @include custom-scrollbar;
+}
+
+/* app level css */
+
+body {
+  overflow-x: hidden;
+  @include fontWeightLight;
+  background: linear-gradient(
+    -90deg,
+    $white-gradient1 0%,
+    $white-gradient2 100%
+  );
+  background-attachment: fixed;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+.heading-container{
+  margin: .6rem 0;
+  .breadcrumb-container {
+    margin-bottom: .6rem;
+  }
+  .search-wrapper {
+    height: 45px;
+    .search {
+      &__options {
+        &--dropdown {
+          width: 10rem;
+        }
+      }
+    }
+  }
+}
+.fixed-top-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.fixed-left-sidebar {
+  position: fixed;
+  z-index: 99;
+}
+
+.face-detection-admin {
+  &.page-authenticated {
+    background-color: $bg-color;
+    margin-top: 68px;
+    min-height: calc(100vh - 68px);
+  }
+  .face-detection-page {
+    height: 100%;
+    &.page-authenticated {
+      // margin-left: 64px;
+      padding: 1rem 4rem;
+    }
+  }
+  .page-body {
+    // margin: 10px;
+  }
+
+  input {
+    &::placeholder {
+      color: $placeholder;
+    }
+  }
+}
+
+.error-box-wrap {
+  @include error-box;
+  .error-box-message {
+    width: 100%;
+  }
+  .error-box-icon {
+    top: 5px;
+    position: relative;
+    height: 12px;
+  }
+}
+.hide {
+  display: none !important;
+}
+.hand {
+  cursor: pointer;
+}
+
+.MuiSnackbar-root {
+  position: fixed !important;
+  z-index: 9999 !important;
+  max-width: 400px;
+}
+
+.MuiAlert-filledSuccess {
+  background-color: #66cc00 !important;
+}
+
+.MuiAlert-filledWarning {
+  background-color: #faca69 !important;
+  .MuiAlert-message {
+    color: #2a2c2e;
+  }
+  .MuiAlert-action {
+    color: #71757b;
+  }
+}
+
+.action-not-allowed {
+  pointer-events: none;
+}
+
+.ml-l4 {
+  margin-left: -4rem !important;
+}
+
+.ml-l7 {
+  margin-left: -7rem !important;
+}
+.mt-8 {
+  margin-top: 8px;
+}
+
+.exempt-employee-form,
+.employee-info .form-container .form-row .chip-container .form-field__value,
+.employee-data-form,
+.notification__list,
+.configuration-history-settings,
+.ReactVirtualized__Table__Grid,
+.dropdown-menu,
+.shift-management-table,
+.search__results-box,
+.shift-card-container__card {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+@-moz-document url-prefix() {
+  /* Mozilla+ CSS styles go here */
+
+  //add classes for custom scrollbar for firefox
+  html,
+  .MuiTableContainer-root,
+  .exempt-employee-form,
+  .employee-info .form-container .form-row .chip-container .form-field__value,
+  .employee-data-form,
+  .notification__list,
+  .ReactVirtualized__Table__Grid,
+  .dropdown-menu,
+  .shift-management-table,
+  .search__results-box  {
+    @include non-webkit-scrollbar;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+.purple {
+  color: $purple !important;
+}
+
+.text-transform {
+  text-transform: capitalize;
+}
+
+.font-light {
+  @include fontWeightLight;
+}
+
+.f-20 {
+  font-size: 1.25rem !important;
+}
+
+.wrap-text{
+  white-space: break-spaces;
+}
+.break-all{
+  word-break: break-all;
+}
+
+.show-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .face-detection-admin .face-detection-page.page-authenticated {
+    margin-left: 0rem;
+  }
+  .face-detection-admin .face-detection-page {
+    width: 100%;
+  }
+}
+
+/* ----------- iPhone device ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  html,
+  body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+}
+
+.half-opacity{
+  opacity: 0.5
+}
+
+.search-icon-wrapper{
+  width: 330px;
+}

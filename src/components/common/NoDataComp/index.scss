@@ -1,0 +1,40 @@
+@import '../../../assets/scss/mixin.scss';
+
+.noDatacomp {
+  margin: auto;
+  width: 50%;
+  padding-top: 25px;
+}
+
+.noDataImg {
+  display: block;
+  margin: auto;
+  width: 60%;
+}
+
+.noDataHeading {
+  @include fontWeightRegular;
+  color: #4b286d;
+  margin: auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.noDataSubHeading {
+  color: #2a2c2e;
+  @include fontWeightRegular;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  .noDatacomp {
+    margin: auto;
+    width: 100%;
+    padding-top: 25px;
+  }
+}

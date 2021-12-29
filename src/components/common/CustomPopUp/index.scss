@@ -1,0 +1,123 @@
+.popup-container {
+  &.small-popup {
+    .popup-content {
+      width: 36% !important;
+      min-width: 468px;
+    }
+  }
+  &.medium-popup {
+    .popup-content {
+      width: 50% !important;
+      min-width: 680px;
+      .pagination-root {
+          .pagination-section {
+              .pagination {
+                margin:0px;
+              }
+          }
+        .item-per-page-wrapper {
+            align-items: center;
+          .show-pagination-dropdown {
+            margin-top: 0px;
+        }
+        } 
+        .pagination-content-wrapper {
+          align-items: center;
+          .pagination {
+            margin: 0px;
+          }
+        }
+      } 
+    }
+  }
+  &.emp-info-popup {
+    .popup-content {
+      width: 53% !important;
+      min-width: 680px;
+    }
+  }
+  &.large-popup {
+    .popup-content {
+      width: 76% !important;
+      min-width: 980px;
+    }
+  }
+  &.view-image-popup {
+    .popup-content {
+      width: 20% !important;
+      min-width: 220px;
+      min-height: 220px;
+    }
+  }
+  &.delete-popup {
+    .popup-content {
+      width: 25% !important;
+      min-width: 358px;
+      min-height: 239px;
+    }
+  }
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+  .popup-content {
+    max-height: calc(100vh - 50px);
+    min-height: 100px;
+    padding: 15px !important;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .title {
+    color: #4b286d;
+    font-size: 18px;
+  }
+  .close {
+    top: 0.2rem;
+    right: 0.2rem;
+    position: absolute;
+    opacity: 1;
+  }
+  .popup-close {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 12px;
+    top: 12px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 468px) {
+  .popup-container {
+    &.small-popup {
+      .popup-content {
+        min-width: 96%;
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .popup-container {
+    &.medium-popup {
+      .popup-content {
+        min-width: 96%;
+      }
+    }
+    &.emp-info-popup {
+      .popup-content {
+        min-width: 96%;
+      }
+    }
+  }
+}
+@media (max-width: 980px) {
+  .popup-container {
+    &.large-popup {
+      .popup-content {
+        min-width: 96%;
+      }
+    }
+  }
+}

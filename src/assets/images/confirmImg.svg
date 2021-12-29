@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="176px" height="120px" viewBox="0 0 176 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 63.1 (101010) - https://sketch.com -->
+    <title>F6FC880E-6250-4838-9BB9-EC1D09FAB0AA@1.5x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="176" height="120" rx="2"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="17_Add_image_inExistting_list" transform="translate(-424.000000, -236.000000)">
+            <g id="Update-Employee-Modal" transform="translate(400.000000, 140.000000)">
+                <g id="Group-11" transform="translate(24.000000, 96.000000)">
+                    <g id="Bitmap">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#F6F6F6" xlink:href="#path-1"></use>
+                    </g>
+                    <text id="Click-here-to-view-u" font-family="HelveticaNeue-Light, Helvetica Neue" font-size="11" font-weight="300" fill="#7F7D7A">
+                        <tspan x="67.6635" y="78">Click here </tspan>
+                        <tspan x="34.658" y="91">to view uploaded image</tspan>
+                    </text>
+                    <g id="image_success_32" transform="translate(72.000000, 19.000000)">
+                        <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                        <path d="M16,30.07 C8.2680135,30.07 2,23.8019865 2,16.07 C2,8.3380135 8.2680135,2.07 16,2.07 C23.7319865,2.07 30,8.3380135 30,16.07 C30,19.7830309 28.5250042,23.3439856 25.8994949,25.9694949 C23.2739856,28.5950042 19.7130309,30.07 16,30.07 Z M16,3.07 C8.82029825,3.07 3,8.89029825 3,16.07 C3,23.2497017 8.82029825,29.07 16,29.07 C23.1797017,29.07 29,23.2497017 29,16.07 C29.0026535,12.6204533 27.6341861,9.31128287 25.1959255,6.8711467 C22.7576649,4.43101053 19.4495477,3.06 16,3.06 L16,3.07 Z" id="Shape" fill="#248700" fill-rule="nonzero"></path>
+                        <path d="M13.62,20.44 C13.3104872,20.439487 13.0144868,20.3131454 12.8,20.09 L9.3,16.36 C9.19865169,16.2676682 9.14062115,16.1370995 9.13997911,16 C9.13810856,15.7882415 9.2648203,15.5964888 9.4603624,15.515196 C9.65590451,15.4339033 9.88121113,15.4793112 10.03,15.63 L13.6,19.43 L21.94,11.62 C22.0422639,11.5211179 22.1778058,11.4640476 22.32,11.46 C22.5274114,11.4620775 22.7137503,11.5872197 22.7941446,11.7784278 C22.874539,11.9696359 22.8336101,12.1903339 22.69,12.34 L14.39,20.08 C14.1887274,20.2939323 13.9132231,20.4227395 13.62,20.44 L13.62,20.44 Z" id="Path" fill="#248700" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

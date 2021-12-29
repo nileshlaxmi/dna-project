@@ -1,0 +1,144 @@
+@import "../../../assets/scss/mixin.scss";
+@import "../../../assets/scss/variable.scss";
+
+.page-heading-section {
+	display: flex;
+	justify-content: space-between;
+	z-index: 2;
+	&.sticky {
+		position: sticky;
+		top: 3.55rem;
+		z-index: 10;
+	}
+	.page-heading {
+		display: flex;
+		align-items: center;
+		color: $purple;
+		white-space: nowrap;
+		margin-bottom: 0.5rem;
+		// overflow: hidden;
+		max-width: 100%;
+		h4 {
+			font-size: 1.5rem;
+			margin-bottom: 0;
+		}
+		h4 + img {
+			margin: 0 0.5rem;
+		}
+		h6 {
+			height: 100%;
+			@include align-center;
+			overflow: hidden;
+			span {
+				margin-left: 0.5rem;
+			}
+		}
+		img {
+			cursor: pointer;
+		}
+		.back {
+			height: 32px;
+			width: 32px;
+			border-radius: 4px;
+			background-color: $breadcrum-gray;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 10px;
+			cursor: pointer;
+			img {
+				width: 26px;
+				height: 20px;
+			}
+		}
+		text-transform: capitalize;
+	}
+	.page-heading-actions {
+		justify-content: flex-end;
+		display: flex;
+		align-items: center;
+		z-index: 2;
+		width: 100%;
+		.inputBoxDiv {
+			height: 45px;
+		}
+		.dropdown-item {
+			padding: 0.55rem 1.5rem;
+		}
+		& > * {
+			margin-right: 15px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&.secondary {
+		.page-heading {
+			// color: #4b286d;
+			.page-heading-title {
+				font-size: 1.5rem;
+				// margin: 0;
+			}
+		}
+		.page-heading-actions {
+			font-size: 14px;
+			.inputBoxDiv {
+				height: 36px;
+			}
+			.dropdown-item {
+				padding: 0.55rem 1.5rem;
+			}
+			& > * {
+				margin-right: 15px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.page-heading-section {
+		.page-heading .page-heading-title {
+			font-size: 1.375rem !important;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.page-heading-section {
+		.page-heading h4 {
+			font-size: 1.15rem !important;
+		}
+	}
+}
+
+@media (max-width: 460px) {
+	.page-heading-section {
+		.page-heading {
+			.mobile-title-description {
+				max-width: 16.625rem;
+				padding: 0;
+				overflow: hidden;
+				position: relative;
+				display: inline-block;
+				text-align: center;
+				text-decoration: none;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				color: $black;
+			}
+		}
+	}
+}
+
+@media (max-width: 348px) {
+	.page-heading-section {
+		.page-heading {
+			.mobile-title-description {
+				max-width: 11.0625rem;
+			}
+		}
+	}
+}

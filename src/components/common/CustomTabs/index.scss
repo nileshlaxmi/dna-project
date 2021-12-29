@@ -1,0 +1,34 @@
+@import '../../../assets/scss/mixin.scss';
+@import '../../../assets/scss/variable.scss';
+
+
+.tabs {
+  display: flex;
+  position: relative;
+  // background-color: $white;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid $gainsboro;
+  .tab {
+    width: 100%;
+    max-width: 280px;
+    float: left;
+    text-align: center;  
+    .tab-label {
+      display: block;
+      padding: 0.625rem 0.75rem;
+      text-decoration: none;
+      color: $label-black;
+      transition: color .15s;
+      @include fontWeightRegular;
+    }
+  }
+  .active {
+    border-bottom: 2px solid $btn-base;
+    .tab-label{
+      color: $btn-base;
+      @include fontWeightBold;
+    }
+  }
+}

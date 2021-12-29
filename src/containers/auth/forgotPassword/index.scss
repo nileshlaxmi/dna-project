@@ -1,0 +1,19 @@
+@import '../../../assets/scss/variable.scss';
+
+.auth-form {
+  &__mail-msg {
+    > div {
+      margin-bottom: 16px;
+    }
+    color: $btn-base;
+  }
+
+  &__footer {
+    .button-box {
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

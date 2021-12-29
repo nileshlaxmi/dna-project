@@ -1,0 +1,168 @@
+@import '../../../assets/scss/variable.scss';
+@import '../../../assets/scss/mixin.scss';
+
+.pagination-root {
+  position: relative;
+  /* padding: 16px 8px; */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .pagination-section {
+    display: flex;
+    justify-content: left;
+    .label {
+      padding: 8px;
+      display: block;
+      font-size: 14px;
+      color: $table-header-gray;
+      margin-left: 19rem;
+    }
+    .pagination {
+      &.itemClass {
+        .left {
+          transform: rotate(135deg);
+          -webkit-transform: rotate(135deg);
+        }
+        .right {
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+          margin-left: 14px;
+        }
+      }
+    }
+    ul li:nth-child(2) {
+      order: 1;
+    }
+    ul li:nth-last-child(2) {
+      order: 5;
+    }
+  }
+
+  .pagination-content-wrapper{
+    min-width: 402px ;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    .result-count {
+      min-width: 210px;
+      display: flex;
+      font-size: 14px;
+      text-align: right;
+      justify-content: flex-end;
+      color: $table-header-gray;
+      @include fontWeightRegular;
+    }
+  }
+
+  .item-per-page-wrapper {
+    min-width: 176px;
+    display: flex;
+    justify-content: right;
+    font-size: 14px;
+    @include fontWeightRegular;
+    color: $table-header-gray;
+    .divider{
+      margin: 0 .5rem;
+    }
+    .show-pagination-dropdown {
+      width: 75px;
+      display: inline-flex;
+      padding-left: 0.5rem;
+      margin-top: -0.5rem;
+    }
+    .label {
+      margin: auto 2px;
+      padding: 2px 2px;
+      color: $table-header-gray;
+    }
+    .show-item-root {
+      margin-left: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 19%;
+    }
+  }
+  
+
+  .linkClass {
+    height: 24px;
+    min-width: 24px;
+    max-width: auto !important;
+    font-size: 14px;
+    @include fontWeightRegular;
+    padding: 4px 4px;
+    color: $table-header-gray;
+    line-height: 1;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .linkClass:hover {
+    color: $table-header-gray;
+    text-decoration: underline;
+  }
+
+  .itemClass {
+    display: inherit;
+    align-items: center;
+    padding: 4px 4px;
+    order: 3;
+  }
+
+  .activeLinkClass {
+    background: $paginationactivegreen;
+    color: $calender-green;
+  }
+
+  .linkClassPrev {
+    background: transparent;
+    min-width: 42px;
+  }
+
+  .linkClassNext {
+    background: transparent;
+    min-width: 42px;
+    /* background: #4b286d; */
+  }
+
+  .itemClassFirst {
+    padding: 0px;
+    order: 2;
+  }
+
+  .itemClassLast {
+    padding: 0px;
+    order: 4;
+  }
+
+  .itemClassFirst a {
+    background: transparent;
+  }
+
+  .itemClassLast a {
+    background: transparent;
+  }
+}
+
+
+
+  @media (max-width: 480px) {
+    .pagination-root {
+      .item-per-page-wrapper {
+        margin: 1rem 0;
+        .divider{
+          display: none;
+        }
+      }
+      .pagination-content-wrapper {
+        min-width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  }

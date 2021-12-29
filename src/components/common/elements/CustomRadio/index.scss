@@ -1,0 +1,45 @@
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.custom-radio-btn:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.custom-radio {
+  display: block;
+  position: relative;
+  // padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0px 27px;
+  text-transform: capitalize;
+  /* Style the indicator (dot/circle) */
+  .custom-radio-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    &:after {
+      top: 3px;
+      left: 3px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background-color: #248700;
+    }
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    &:checked ~ .custom-radio-btn:after {
+      display: block;
+    }
+  }
+}

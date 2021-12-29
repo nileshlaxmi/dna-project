@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>7D576EE0-8222-4247-A6FF-7E05C7BEC2A6</title>
+    <g id="Varint_Shift-Management" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01_shft_listPage1" transform="translate(-430.000000, -288.000000)">
+            <g id="Group" transform="translate(422.000000, 227.000000)">
+                <g id="actual" transform="translate(8.000000, 61.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="18" height="18"></rect>
+                    <path d="M10.665,9.045 L10.665,9.045 C10.6702546,9.56443572 10.4063856,10.0496142 9.9675,10.3275 C9.0221327,10.9735978 8.45989825,12.0474656 8.4675,13.1925 L14.4675,13.1925 C14.4777755,12.046819 13.9149219,10.9717687 12.9675,10.3275 C12.5286144,10.0496142 12.2647454,9.56443572 12.27,9.045 L12.27,9.045 C12.267344,8.52822354 12.5308903,8.04647223 12.9675,7.77 C13.9388105,7.10534101 14.5042744,5.99137718 14.4675,4.815 L8.49,4.815 C8.45742498,5.99043759 9.0219266,7.10250577 9.99,7.77 C10.4180219,8.05179496 10.6725657,8.53259983 10.665,9.045 Z" id="Path" stroke="#71757B" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3875,16.125 L10.3875,16.125 C6.45247116,16.125 3.2625,12.9350288 3.2625,9 L3.2625,9 C3.2625,5.06497116 6.45247116,1.875 10.3875,1.875 L10.3875,1.875" id="Path" stroke="#71757B" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

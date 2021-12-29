@@ -1,0 +1,16 @@
+@import '../../../assets/scss/mixin.scss';
+@import '../../../assets/scss/variable.scss';
+.custom-line-chart {
+  margin: 0;
+  padding: 0;
+  font-size: 0.75rem;
+  @include fontWeightRegular;
+  .recharts-legend-item-text{
+    color: $raven-gray
+  }
+  .recharts-legend-wrapper{
+    // margin-top: -14px;
+    // bottom: auto !important;
+    // top: 0px !important;
+  }
+}

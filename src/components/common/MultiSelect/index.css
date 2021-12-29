@@ -1,0 +1,28 @@
+.multiselect-react {
+  width: 100%;
+}
+
+.multiselect-react div.root {
+  color: #248700;
+  position: absolute;
+  right: 0px;
+  /* top: 2px; */
+  padding: 4px 3px;
+  width: 28px;
+  text-align: center;
+  margin: 2px;
+  font-weight: 600;
+  font-size: 14px;
+  height: 1.7rem;
+  border-radius: 4px;
+  background: #f4f9f2;
+}
+
+.multiselect-react div.more {
+  margin-top: 0.7rem;
+  font-weight: 600;
+  height: 1rem;
+}
+.multiselect-react .css-1ep9fjw {
+  color: #248700;
+}

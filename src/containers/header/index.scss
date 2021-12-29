@@ -1,0 +1,287 @@
+@import '../../assets/scss/mixin.scss';
+@import '../../assets/scss/variable.scss';
+
+@mixin triangle-position {
+  position: absolute;
+  top: 3.4375rem;
+}
+
+.top-header {
+  @include align-center;
+  justify-content: space-between;
+  padding: 15px 12px;
+  border-bottom: 1px solid $gainsboro;
+  max-height: 69px;
+  background: $white;
+  white-space: nowrap;
+  .logo-div {
+    @include align-center;
+    .logo-wrapper {
+      cursor: pointer;
+      margin-right: 0.4rem;
+      .logo-img {
+        width: 10rem;
+      }
+      .mobile-logo-img {
+        display: none;
+      }
+    }
+
+    &--text {
+      font-size: 1.1875rem;
+      border-left: 2px solid $header-gray;
+      span {
+        margin-left: 0.25rem;
+      }
+    }
+  }
+  .right-section {
+    @include align-center;
+    @include fontWeightRegular;
+    width: 100%;
+    justify-content: flex-end;
+    margin-left: 2rem;
+    .user-profile {
+      @include align-center;
+      position: relative;
+      @include fontWeightRegular;
+      &__circle {
+        margin-right: 0.75rem;
+        border-radius: 50%;
+        background-color: $header-circle;
+        height: 2.5rem;
+        width: 2.5rem;
+        @include vertical-align;
+      }
+
+      &__name-wrapper {
+        display: flex;
+        align-items: center;
+      }
+      &__name {
+        margin-top: 0.4375rem;
+        &--text {
+          margin-right: 1rem;
+          font-size: 0.875rem;
+          line-height: 0.9375rem;
+        }
+        &--img {
+          display: none;
+          cursor: pointer;
+        }
+        &--last-login {
+          span {
+            font-size: 0.75rem;
+            font-family: $font-telus-bold;
+            color: #54595f;
+            line-height: 1.5rem;
+          }
+        }
+      }
+
+      &__dropdown {
+        @include triangle-position;
+        right: 0.75rem;
+        box-sizing: border-box;
+        // height: 12.125rem;
+        width: 15.125rem;
+        border-radius: 0.125rem;
+        background-color: $white;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+        &--large {
+          height: 8.625rem;
+          width: 100%;
+          padding: 1rem 1rem;
+
+          &--name {
+            font-size: 0.875rem;
+            color: $label-black;
+            display: flex;
+            flex-direction: column;
+            span:last-child {
+              font-size: 0.75rem;
+              color: $label;
+              margin-left: 4px;
+              @include ellipsis;
+            }
+          }
+          &--email {
+            width: 100%;
+            font-size: 0.75rem;
+            color: $label-black;
+            @include ellipsis;
+            padding-top: 1rem;
+            @include fontWeightLight;
+          }
+          &--last-login {
+            .last-login-heading {
+              font-size: 12px;
+              color: $raven-gray;
+              @include fontWeightBold;
+              line-height: 15px;
+            }
+            .last-login-date {
+              font-size: 0.8125rem;
+              color: $label-black;
+              @include fontWeightLight;
+              line-height: 16px;
+            }
+          }
+          &--name-id-block {
+            display: flex;
+          }
+          .tooltip-text {
+            margin-top: 15px;
+          }
+        }
+        &--small {
+          font-size: 0.875rem;
+          padding: 0.5rem;
+          box-sizing: border-box;
+          border-top: 1px solid $gainsboro;
+          .menu-item {
+            margin: 0.5rem;
+            text-transform: capitalize;
+            &.selected {
+              color: green;
+              cursor: auto;
+            }
+          }
+          .sub-menu {
+            font-size: 0.75rem;
+          }
+        }
+      }
+
+      &__triangle {
+        @include triangle-position;
+        top: 2.75rem;
+        left: 0.5rem;
+        @include arrow-up($white1);
+      }
+    }
+    .search-icon-wrapper {
+      width: 100%;
+      min-width: 332px;
+      max-width: 27.25rem;
+      .search-icon {
+        display: none;
+      }
+      .search-wrapper {
+        height: 2.625rem;
+        margin-right: 0.75rem;
+        .search {
+          &__form {
+            width: 100%;
+          }
+          &__input-bar {
+            &--input {
+              width: calc(100% - 1.75rem);
+            }
+
+            .form-input {
+              &__page-property-block {
+                width: 100%;
+              }
+            }
+          }
+
+          &__results-box {
+            &--flow {
+              padding: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .top-header {
+    .logo-div {
+      &--text {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 875px) {
+  .top-header {
+    .right-section {
+      .user-profile {
+        &__name {
+          &--text {
+            display: none;
+          }
+        }
+      }
+      .search-icon-wrapper {
+        width: auto;
+        min-width: auto;
+        max-width: none;
+        .search-icon {
+          display: block;
+        }
+        .search-wrapper {
+          position: absolute;
+          top: 4.25rem;
+          right: 0rem;
+          left: 0;
+          margin-left: 1rem;
+          .search__input-bar--image {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .top-header {
+    .logo-div {
+      .logo-wrapper {
+        .logo-img {
+          display: none;
+        }
+        .mobile-logo-img {
+          width: 3.75rem;
+          display: block;
+        }
+        margin-right: 0px;
+      }
+    }
+    .right-section {
+      .user-profile {
+        &__triangle {
+          top: 2.5rem;
+          left: 0.8125rem;
+          border-left: 8px solid transparent;
+          border-right: 9px solid transparent;
+          border-bottom: 10px solid $white1;
+        }
+        &__dropdown {
+          top: 53px;
+          right: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 935px) {
+  .top-header .right-section .user-profile__name--last-login {
+    display: none;
+  }
+}
+
+@media (min-width: 1800px) {
+  .top-header .right-section {
+    .search-icon-wrapper {
+      max-width: 60%;
+    }
+  }
+}

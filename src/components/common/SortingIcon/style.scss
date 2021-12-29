@@ -1,0 +1,11 @@
+@import '../../../assets/scss/variable.scss';
+@import '../../../assets/scss/mixin.scss';
+
+.sorting-icon {
+  @include align-center;
+  height: 38px;
+  border: 1px solid $gainsboro;
+  background-color: $white;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+}

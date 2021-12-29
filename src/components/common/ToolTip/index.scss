@@ -1,0 +1,40 @@
+@import 'assets/scss/mixin.scss';
+
+.__react_component_tooltip.type-dark.place-left:after {
+  margin-top: -5px;
+  margin-left: 0 !important;
+  right: -6px !important;
+  left: auto !important;
+  display: none;
+}
+
+.__react_component_tooltip.type-dark.place-left:before {
+  margin-top: -8px;
+  margin-left: 0 !important;
+  right: -8px !important;
+  left: auto !important;
+  background-color: #00000094 !important;
+  border-color: #00000094 !important;
+  border-right-color: #00000094 !important;
+}
+
+.__react_component_tooltip.place-bottom.type-dark::after {
+  display: none;
+}
+.__react_component_tooltip.place-bottom.type-dark::before {
+  background-color: #00000094 !important;
+  border-color: #00000094 !important;
+  border-right-color: #00000094 !important;
+}
+
+.tooltip-text {
+  max-width: 280px;
+  font-size: 0.75rem;
+  border-radius: 3px;
+  @include fontWeightLight;
+  font-weight: 400;
+}
+
+.__react_component_tooltip{
+  width: fit-content !important;
+}

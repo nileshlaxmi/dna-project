@@ -1,0 +1,164 @@
+@import './variable.scss';
+
+@mixin align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin vertical-align {
+  @include align-center;
+  justify-content: center;
+}
+
+@mixin flexValue($value) {
+  @include align-center;
+  justify-content: $value;
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin wh-100 {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin btn-box {
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px 16px;
+  letter-spacing: 0.3px;
+  line-height: 20px;
+  font-size: 14px;
+  min-width: 80px;
+  margin: 8px;
+  min-height: $cmn-btn-ht;
+  text-transform: uppercase;
+}
+
+@mixin error-box {
+  display: flex;
+  align-items: baseline;
+  word-wrap: break-word;
+  color: $error-text;
+  margin-left: 2px;
+  top: 2px;
+  position: relative;
+  font-size: 12px;
+  flex-direction: column;
+}
+
+@mixin input-field {
+  display: block;
+  width: 100%;
+  border-radius: 0.15rem;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 24px;
+  background-clip: padding-box;
+  border: 1px solid $border-grey;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  min-height: $cmn-ip-ht;
+  height: $cmn-ip-ht;
+}
+
+@mixin label-field {
+  padding-right: 16px;
+  min-width: 25%;
+  width: 25%;
+  font-size: $label-reg;
+  color: $label;
+  text-align: right;
+  align-self: center;
+}
+
+@mixin login-box {
+  padding: 3rem;
+  min-width: 394px;
+  box-shadow: 0px 0px 15px -8px;
+  background-color: $white;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+}
+
+@mixin form-focus {
+  color: $grayish-blue;
+  background-color: $white;
+  border-color: $purple;
+  outline: 0;
+}
+
+@mixin auth-background {
+  background-attachment: fixed;
+  background-position: top left;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@mixin mandatory {
+  margin-right: 2px;
+  color: $error-text;
+}
+
+@mixin fontWeightBold {
+  font-family: $font-telus-bold;
+  letter-spacing: $font-bold-letter-spacing;
+}
+@mixin fontWeightRegular {
+  font-family: $font-telus-regular;
+  letter-spacing: $font-regular-letter-spacing;
+}
+
+@mixin fontWeightLight {
+  font-family: $font-telus-light;
+  letter-spacing: $font-light-letter-spacing;
+}
+
+@mixin arrow-up($color) {
+  width: 0;
+  height: 0;
+  border-left: 0.75rem solid transparent;
+  border-right: 0.75rem  solid transparent;
+  border-bottom: 0.75rem solid $color;
+}
+
+@mixin resetLabel {
+  padding-right: 0;
+  width: 100%;
+  text-align: start;
+  align-self: unset;
+  margin-bottom: 4px;
+}
+
+@mixin custom-scrollbar {
+  ::-webkit-scrollbar-thumb {
+    background: $gray-2;
+    border-radius: 5px;
+    left: 2px;
+    padding: 1px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+    background: $scrollbar-white;
+    border-radius: 50px;
+  }
+
+  // /* Track */
+  ::-webkit-scrollbar-track {
+    background-clip: content-box;
+    background-color: $white;
+    background-color: $scrollbar-white;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@mixin non-webkit-scrollbar{
+    scrollbar-width: thin;
+}

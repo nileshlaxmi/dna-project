@@ -1,0 +1,59 @@
+@import '../../../assets/scss/mixin.scss';
+@import '../../../assets/scss/variable.scss';
+
+.session-warning {
+  .popup-container {
+    .popup-overlay {
+      .popup-content {
+        .popup-width {
+          @include wh-100;
+          .popup-body {
+            @include wh-100;
+            .session-warning__body {
+              @include wh-100;
+              &--image-box {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin-bottom: 1rem;
+                &--img {
+                  margin: 1rem;
+                }
+                &--text {
+                  min-width: 245px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  &--title {
+                    @include fontWeightRegular;
+                    color: $purple;
+                    margin-bottom: 1.625rem;
+                  }
+                  &--subtitle {
+                    @include fontWeightLight;
+                    font-size: 0.875rem;
+                    color: $label-black;
+                  }
+                }
+              }
+              &--btn-box {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                .button-box {
+                  &__button {
+                    @include fontWeightRegular;
+                    min-height: 40px;
+                    text-transform: uppercase;
+                    width: 13rem;
+                    margin: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

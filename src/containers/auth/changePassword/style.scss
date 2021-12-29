@@ -1,0 +1,31 @@
+@import '../../../assets/scss/mixin.scss';
+
+.reset-form-box {
+  button {
+    &:focus {
+      outline: none !important;
+    }
+  }
+  .auth-form {
+    &__footer {
+      .button-box {
+        margin-bottom: 16px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+.modal-open .modal {
+  overflow: hidden;
+}
+
+.change-password {
+  .auth-form {
+    &__inner {
+      max-height: 554px;
+      overflow-y: auto;
+    }
+  }
+}

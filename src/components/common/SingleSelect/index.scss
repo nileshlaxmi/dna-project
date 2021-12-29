@@ -1,0 +1,105 @@
+@import '../../../assets/scss/mixin.scss';
+@import '../../../assets/scss/variable.scss';
+
+.botDropdown {
+  position: relative;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: block;
+}
+
+.inputBoxDiv {
+  width: 100%;
+  height: 2.25rem;
+  border: 1px solid $gainsboro;
+  border-radius: 4px;
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  position: relative;
+  align-items: center;
+  background: transparent;
+  &.disabled {
+    background-color: $gray-3;
+  }
+}
+
+.inputBoxDiv:focus-within {
+  border: 1px solid $white !important;
+  box-shadow: 0px 0px 4px $label;
+  color: $label-black;
+  position: relative;
+}
+
+.inputControl {
+  border: none;
+  width: 100%;
+  padding-right: 13px;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: block;
+  outline: none;
+  &:disabled {
+    background: $white;
+    &.disabled {
+      background: $gray-3;
+    }
+  }
+}
+
+.noSearch{
+  caret-color: transparent;
+  color: $input-text;
+}
+
+.inputBoxDiv .arrow-wrapper {
+  color: $raven-gray;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.header-bot-list {
+  .dropdown-header-bot-box {
+    width: 100%;
+    margin-top: 0px !important;
+    cursor: pointer;
+
+    a.active,
+    a.active:hover {
+      color: $calender-green !important;
+    }
+
+    .dropdown-item:hover {
+      background-color: $calender-green !important;
+      color: $white !important;
+    }
+
+    .active:hover {
+      background-color: $white !important;
+      color: $calender-green !important;
+    }
+
+    .conversationBotListDropdown a {
+      white-space: nowrap !important;
+      text-transform: capitalize;
+      font-size: 0.875rem;
+      @include fontWeightRegular;
+    }
+
+    a.active {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: -7px;
+      background-color: $white !important;
+    }
+
+    .tick-icon {
+      float: right;
+    }
+  }
+}

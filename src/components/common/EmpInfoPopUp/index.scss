@@ -1,0 +1,81 @@
+@import '../../../assets/scss/mixin.scss';
+@import '../../../assets/scss/variable.scss';
+
+.employee-info {
+  overflow: auto;
+  max-height: 480px;
+  position: relative;
+  .form-container {
+    .form-row {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      .form-field {
+        padding: 0.5rem;
+        flex-wrap: wrap;
+        width: 50%;
+        &__label {
+          font-size: 0.75rem;
+          color: $label;
+          padding-bottom: 0.25rem;
+          @include fontWeightBold;
+        }
+        &__value {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: $label-black;
+          font-size: 0.875rem;
+          .debug-toggle{
+            display:flex;
+            .download-image{
+              padding : 0 0.75rem 0 1.5rem;
+              cursor: pointer; 
+              margin-bottom:0.5rem;
+            }
+          }
+         
+        }
+      }
+      .group {
+        text-transform: capitalize;
+      }
+      .fontBold {
+        @include fontWeightBold;
+      }
+      .chip-container {
+        padding: 0.5rem;
+        &__chip {
+          color: $label-black;
+          background-color: $background-grey;
+          font-size: 0.75rem;
+          @include fontWeightRegular;
+          border: 1px solid $gainsboro;
+          border-radius: 30px;
+          height: 30px;
+          padding: 0 1rem 0 1rem;
+          display: inline-flex;
+          align-items: center;
+          margin: 0 0.5rem 0.5rem 0;
+          max-width: 100%;
+          overflow: hidden;
+        }
+        .form-field__value {
+          overflow: auto;
+          max-height: 120px;
+        }
+      }
+      .text-capitalize {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .employee-info {
+        max-height: 26.5625rem;
+    .form-container .form-row .form-field {
+      width: 20.4375rem;
+    }
+  }
+}

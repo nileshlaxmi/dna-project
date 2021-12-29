@@ -1,0 +1,39 @@
+/* Toasts */
+.toast-container {
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  padding: 10px;
+  z-index: 999;
+}
+.show-toast {
+  display: block;
+  opacity: 1;
+  background-color: #fff;
+  width: 350px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.show-toast .toast-header img {
+  opacity: 0.5;
+}
+.show-toast .progress {
+  height: 2px;
+}
+@keyframes progress-toast {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes progress-toast {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

@@ -1,0 +1,44 @@
+@import '../../../../assets/scss/variable.scss';
+@import '../../../../assets/scss/mixin.scss';
+
+.button-box {
+  &__button {
+    @include btn-box;
+  }
+  &__btn-group {
+    margin: 24px 0;
+  }
+  button {
+    outline: none;
+  }
+}
+
+.submit {
+  border: 1px solid $btn-border;
+  color: $white;
+  background-color: $btn-base;
+  .disabled {
+    opacity: 0.5;
+  }
+}
+
+.green-outline {
+  border: 1px solid $btn-border;
+  color: $btn-base;
+  background-color: $white;
+  .disabled {
+    opacity: 0.5;
+  }
+}
+
+.cancel {
+  border: 1px solid $btn-base;
+  color: $btn-border;
+  background-color: $white;
+}
+
+.purple-btn {
+  border: 1px solid $purple;
+  color: $white !important;
+  background-color: $purple;
+}

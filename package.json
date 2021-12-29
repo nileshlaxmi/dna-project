@@ -1,0 +1,114 @@
+{
+  "name": "face-detection-ui",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "axios": "^0.21.2",
+    "bootstrap": "^4.4.1",
+    "bootstrap-daterangepicker": "^3.1.0",
+    "classnames": "^2.2.6",
+    "connected-react-router": "^6.8.0",
+    "dompurify": "^2.3.0",
+    "js-file-download": "^0.4.11",
+    "lodash": "^4.17.20",
+    "moment": "^2.27.0",
+    "node-sass": "^4.13.1",
+    "paginator": "^1.0.0",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.13.5",
+    "react": "^16.13.0",
+    "react-bootstrap": "^1.0.0-beta.17",
+    "react-bootstrap-daterangepicker": "^7.0.0",
+    "react-countdown": "^2.3.1",
+    "react-dom": "^16.13.0",
+    "react-file-drop": "^3.1.2",
+    "react-h5-audio-player": "^3.7.1",
+    "react-helmet": "^5.2.1",
+    "react-html-parser": "^2.0.2",
+    "react-icons": "^3.9.0",
+    "react-idle-timer": "^4.3.6",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-is": "^16.13.0",
+    "react-js-pagination": "^3.0.3",
+    "react-loading-overlay": "^1.0.1",
+    "react-rangeslider": "^2.2.0",
+    "react-redux": "^7.2.0",
+    "react-responsive-carousel": "^3.2.10",
+    "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.3",
+    "react-select": "^3.1.0",
+    "react-simple-timefield": "^3.2.3",
+    "react-switch": "^5.0.1",
+    "react-time-range": "^1.0.4",
+    "react-toastify": "^6.0.8",
+    "react-tooltip": "^4.2.6",
+    "react-use": "^14.1.0",
+    "react-virtualized": "^9.22.3",
+    "reactjs-popup": "^1.5.0",
+    "recharts": "^1.8.5",
+    "redux": "^4.0.5",
+    "redux-freeze": "^0.1.7",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
+    "video-react": "^0.14.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest --env=jsdom",
+    "test1": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --env=jsdom",
+    "eject": "react-scripts eject",
+    "deployQa": "chmod 777 deployment.sh && ./deployment.sh"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^12.1.10",
+    "identity-obj-proxy": "^3.0.0",
+    "lint-staged": "^10.0.8",
+    "mutation-observer": "^1.0.3",
+    "mutationobserver-shim": "^0.3.7",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^17.0.2",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
+  "proxy": "https://fd-demo.xavlab.xyz"
+}

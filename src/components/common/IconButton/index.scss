@@ -1,0 +1,11 @@
+@import '../../../assets/scss/variable.scss';
+@import '../../../assets/scss/mixin.scss';
+
+.filter-icon {
+  @include align-center;
+  height: 2.75rem;
+  border: 1px solid $gainsboro;
+  background-color: $white;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+}
