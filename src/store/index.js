@@ -2,26 +2,18 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import ActionTypes from './auth/actionTypes';
-import auth from './auth/reducer';
 import common from './common/reducer';
-import retain from './retain/reducer';
-import dna from './dna/reducer';
+import transcripts from './transcripts/reducer';
 
 const loggerMiddleware = createLogger();
 
 const appReducer = combineReducers({
-  auth,
   common,
-  retain,
-  dna
+  transcripts
 });
 
 const rootReducer = (stateData, action) => {
   let state = stateData;
-  if (action.type === ActionTypes.LOGOUT_SUCCESS) {
-    state = undefined;
-  }
   return appReducer(state, action);
 };
 

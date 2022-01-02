@@ -59,21 +59,10 @@ body {
   z-index: 99;
 }
 
-.face-detection-admin {
-  &.page-authenticated {
-    background-color: $bg-color;
-    margin-top: 68px;
-    min-height: calc(100vh - 68px);
-  }
-  .face-detection-page {
+.dna-project {
+  height: 100%;
+  &.dna-project-page {
     height: 100%;
-    &.page-authenticated {
-      // margin-left: 64px;
-      padding: 1rem 4rem;
-    }
-  }
-  .page-body {
-    // margin: 10px;
   }
 
   input {
@@ -208,27 +197,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  .face-detection-admin .face-detection-page.page-authenticated {
-    margin-left: 0rem;
-  }
-  .face-detection-admin .face-detection-page {
+  .dna-project .dna-project-page {
     width: 100%;
   }
-}
-
-/* ----------- iPhone device ----------- */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-  html,
-  body {
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-  }
-}
-
-.half-opacity{
-  opacity: 0.5
-}
-
-.search-icon-wrapper{
-  width: 330px;
 }

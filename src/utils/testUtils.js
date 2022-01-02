@@ -16,7 +16,7 @@ import notification from 'store/notification/reducer';
 import users from 'store/manageUsers/reducer';
 import employees from 'store/employees/reducer';
 import analytics from 'store/analytics/reducer';
-import retain from 'store/retain/reducer';
+import retain from 'store/transcripts/reducer';
 import settings from 'store/settings/reducer';
 import utility from 'store/utility/reducer';
 import alert from 'store/alert/reducer';
