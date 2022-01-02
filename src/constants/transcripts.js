@@ -7,33 +7,22 @@ export const initialTableConfig = {
 
 export const transcriptsTableHeader = [
 	{
-		label: "Description",
-		dataKey: "desc",
-		className: "show-ellipsis uppercase-text",
-		width: "16%",
-	},
-	{
 		label: "ID",
 		dataKey: "id",
 		className: "show-ellipsis uppercase-text",
 		width: "16%",
 	},
 	{
-		label: "Molecule",
-		dataKey: "molecule",
+		label: "Description",
+		dataKey: "desc",
 		className: "show-ellipsis uppercase-text",
-		width: "16%",
+		width: "20%",
 	},
 	{
 		label: "Sequence",
 		dataKey: "seq",
 		className: "show-ellipsis uppercase-text",
-		width: "20%",
-	},
-	{
-		label: "Version",
-		dataKey: "version",
-		width: "16%",
+		width: "28%",
 	},
 	{
 		label: "Query",
@@ -41,5 +30,15 @@ export const transcriptsTableHeader = [
 		className: "show-ellipsis uppercase-text",
 		width: "16%",
 	},
-	
+	{
+		label: "Molecule",
+		dataKey: "molecule",
+		className: "show-ellipsis uppercase-text",
+		width: "10%",
+	},
+	{
+		label: "Version",
+		dataKey: "version",
+		width: "10%",
+	},
 ];

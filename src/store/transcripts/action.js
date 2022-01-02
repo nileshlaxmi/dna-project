@@ -19,10 +19,12 @@ export const getGeneSymbolTranscript = (payload) => (dispatch) => {
 					sequenceObj.gene = payload;
 					sequenceObj.sequence = resp;
 					_response = [..._response, sequenceObj];
-					dispatch({
-						type: actionTypes.GET_GENE_SYMBOL_TRANSCRIPT_SUCCESS,
-						payload: _response,
-					});
+					if (_response.length) {
+						dispatch({
+							type: actionTypes.GET_GENE_SYMBOL_TRANSCRIPT_SUCCESS,
+							payload: _response,
+						});
+					}
 				});
 			});
 			dispatch(hideLoader());
