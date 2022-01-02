@@ -1,0 +1,85 @@
+@import "../../assets/scss/mixin.scss";
+@import "../../assets/scss/variable.scss";
+
+@mixin resetLabel {
+	padding-right: 0;
+	width: 100%;
+	text-align: start;
+	align-self: unset;
+	margin-bottom: 4px;
+}
+
+.gene-symbol-form {
+	background-image: url(../../assets/images/dna-hd-white.jpg);
+	@include auth-background;
+	@include vertical-align;
+
+	&__inner {
+		@include form-box;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1rem;
+	}
+
+	&__body {
+		&--small {
+			text-align: center;
+			margin-bottom: 16px;
+			color: $label-black;
+			font-size: 1.125rem;
+			@include fontWeightRegular;
+		}
+
+		.form-input {
+			&__page-property-block {
+				display: block;
+				padding: 0;
+				margin-bottom: 16px;
+			}
+			&__label-field {
+				@include resetLabel;
+			}
+			&__form-control {
+				border-radius: 0.15rem;
+				padding: 1.5rem 0.81rem;
+				&--disabled {
+					border-radius: 0.15rem;
+					padding: 1.5rem 0.81rem;
+				}
+				&--error {
+					border-radius: 0.15rem;
+					padding: 1.5rem 0.81rem;
+				}
+			}
+		}
+
+		.MuiFormControl-root {
+			width: 100%;
+			.MuiFormLabel-root {
+				font-size: 14px;
+				@include fontWeightLight;
+        &.Mui-focused{
+          color: $raven-gray;
+        }
+			}
+      .MuiFormControlLabel-label {
+        font-size: 14px;
+        @include fontWeightLight;
+        color: $raven-gray;
+      }
+		}
+	}
+	.submit-btn {
+		font-size: 1rem;
+		padding: 0.57rem;
+	}
+}
+
+.error {
+	color: $error-text;
+	font-size: 0.85rem;
+	margin: 0.5rem 0;
+}

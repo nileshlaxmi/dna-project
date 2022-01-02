@@ -11,8 +11,7 @@ export const errorHandler = ({ request, response, message }) => {
   if (response) {
     // The request was made and the server responded with a status code
     // that falls out of the range of 2xx
-
-    let err = response.data && (response.data.errors || response.data.message);
+    let err = response.data && (response.data.error || response.data.message);
     if (response.status === 500) {
       err = [errorMessages.apiError(response.status)];
     }

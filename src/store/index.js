@@ -6,6 +6,7 @@ import ActionTypes from './auth/actionTypes';
 import auth from './auth/reducer';
 import common from './common/reducer';
 import retain from './retain/reducer';
+import dna from './dna/reducer';
 
 const loggerMiddleware = createLogger();
 
@@ -13,6 +14,7 @@ const appReducer = combineReducers({
   auth,
   common,
   retain,
+  dna
 });
 
 const rootReducer = (stateData, action) => {
@@ -25,9 +27,9 @@ const rootReducer = (stateData, action) => {
 
 function configureStore(preloadedState) {
   const middlewares = [];
-  // if (process.env.NODE_ENV === 'development') {
-  //   middlewares.push(loggerMiddleware, freeze);
-  // }
+  if (process.env.NODE_ENV === 'development') {
+    middlewares.push(loggerMiddleware);
+  }
   return createStore(
     rootReducer,
     preloadedState,

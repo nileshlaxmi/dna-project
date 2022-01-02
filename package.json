@@ -1,5 +1,6 @@
 {
-  "name": "face-detection-ui",
+  "name": "dna-project",
+  "author": {"name": "Nilesh Laxmi", "email": "nileshlaxmi4@gmail.com"},
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -110,5 +111,5 @@
       ]
     ]
   },
-  "proxy": "https://fd-demo.xavlab.xyz"
+  "proxy": "http://rest.ensembl.org"
 }

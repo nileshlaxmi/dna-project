@@ -47,10 +47,8 @@ const endpoints = {
     filterReason,
   }) => 
     `/api/v1/emp/${username}/screen-capture?${page ? 'page=' + page : ''}${size ? '&size=' + size : ''}${sortBy ? '&sort=' + sortBy : ''}${sortOrder ? '&order=' + sortOrder : ''}${start_date ? '&start_date=' + start_date : ''}${end_date ? '&end_date=' + end_date : ''}${time_zone ? '&time_zone=' + encodeURIComponent(time_zone) : ''}${type ? '&type=' + type : ''}`,
-    // `/api/v1/emp/${empId}/retain?${page ? 'page=' + page : ''}${size ? '&size=' + size : ''}${sortBy ? '&sort=' + sortBy : ''}${sortOrder ? '&order=' + sortOrder : ''}${start_date ? '&start_date=' + start_date : ''}${end_date ? '&end_date=' + end_date : ''}${time_zone ? '&time_zone=' + encodeURIComponent(time_zone) : ''}${type ? '&type=' + type : ''}${filterReason ? '&filterReason=' + filterReason : ''}`,
 
-  getSignedImageUrlUniqueLogin: ({ userName, image }) =>
-    `/api/v1/emp/sign-url?user_name=${userName}&video=${image}`,
+  getGeneSymbol: ({species, gene_symbol, pageNumber=1}) => `/lookup/symbol/${species}/${gene_symbol}.json?;expand=${pageNumber}`
 
 };
 

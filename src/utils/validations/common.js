@@ -8,10 +8,6 @@ export const constants = {
   alphabetsWithSpaceOrEmpty: /^$|^[a-zA-Z][a-zA-Z ]*$/,
   specialCharsWithSpaceForVariables: /^[{}$a-zA-Z][0-9a-zA-Z-_{} :$]+$/,
   onlySpace: /^[ ]+$/,
-  validPhone: /^[0-9][0-9-]{8,11}[0-9]$/,
-  // validEmail: /^([a-zA-Z0-9_\.\-])+\@(telusinternational.com)+$/i,
-  validEmail: /^.+\@(telusinternational.com)+$/i,
-  validDomain: /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+$/,
   searchRegex: /[*&#%]+/
 };
 
@@ -25,7 +21,6 @@ export const alphabetsWithSpaceOrEmpty = value =>
   constants.alphabetsWithSpaceOrEmpty.test(value);
 export const validateRequired = value =>
   value && value.toString().trim().length > 0;
-export const isValidEmail = value => constants.validEmail.test(value);
 
 export const validateMinLength = (value, minLength) => {
   try {
@@ -56,14 +51,3 @@ export const validateMaxLength = (value, maxLength) => {
   }
 };
 
-export const checkEqual = (value1 = '', value2 = '') => {
-  if (value1 && value2 && value1 === value2) return true;
-};
-
-export const validateRange = (value, min, max) => {
-  if (value && value >= min && value <= max) return true;
-};
-
-export const validatePositiveInteger = value => {
-  if (value && value > 0) return true;
-};
