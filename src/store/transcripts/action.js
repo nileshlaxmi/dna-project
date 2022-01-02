@@ -11,27 +11,22 @@ export const getGeneSymbolTranscript = (payload) => (dispatch) => {
 	return getGeneSymbolTranscriptService(payload)
 		.then((response) => {
 			const { Transcript = [] } = response;
-			const _response = [];
-      // To Do
+			let _response = [];
+
 			Transcript.forEach((item) => {
 				return getDNASequenceService(item).then((resp) => {
 					const sequenceObj = {};
 					sequenceObj.gene = payload;
 					sequenceObj.sequence = resp;
-					_response.push(sequenceObj);
+					_response = [..._response, sequenceObj];
+					dispatch({
+						type: actionTypes.GET_GENE_SYMBOL_TRANSCRIPT_SUCCESS,
+						payload: _response,
+					});
 				});
 			});
-			return _response;
-		})
-		.then((_response) => {
-			if (_response) {
-				dispatch({
-					type: actionTypes.GET_GENE_SYMBOL_TRANSCRIPT_SUCCESS,
-					payload: _response,
-				});
-			}
-			console.log("_response", _response);
 			dispatch(hideLoader());
+			return _response;
 		})
 		.catch((errorResponse) => {
 			dispatch(hideLoader());
