@@ -21,17 +21,26 @@ class GeneSymbolContainer extends Component {
 	state = {
 		species: "",
 		gene_symbol: "",
-		position: "",
+		position: 0,
 		amino_acid_letter: "",
+		option: "",
 		errors: {},
 	};
 
 	handleChange = (name, value) => {
+		const { option } = this.state;
 		let _errors = { ...this.state.errors };
 		let property = name;
 		const validation = defaultValidation[property];
 		if (validation) {
-			let error = validation({ value });
+			let obj = {};
+			if (property === "position") {
+				obj.value = value;
+				obj.property = option;
+			} else {
+				obj.value = value;
+			}
+			let error = validation(obj);
 			if (error) {
 				_errors[property] = error;
 			} else {
@@ -39,12 +48,24 @@ class GeneSymbolContainer extends Component {
 			}
 			this.setState({ errors: { ..._errors } });
 		}
-		this.setState({ [property]: value });
+		if (property === "option") {
+			this.setState({ [property]: value }, () => {
+				this.setState({ position: value === "anywhere" ? 0 : 10 });
+			});
+		} else {
+			this.setState({ [property]: value });
+		}
 	};
 
 	submit = (e) => {
 		e.preventDefault();
-		const { species, gene_symbol, position, option, amino_acid_letter } = this.state;
+		const {
+			species,
+			gene_symbol,
+			position,
+			option,
+			amino_acid_letter,
+		} = this.state;
 		const { history } = this.props;
 
 		const gene = {};
@@ -55,26 +76,24 @@ class GeneSymbolContainer extends Component {
 
 		const geneFormErrors = validateForm({
 			formData: gene,
-			formFields: ["species", "gene_symbol", "amino_acid_letter"],
+			formFields: ["species", "gene_symbol", "position", "amino_acid_letter"],
 		});
 
 		if (Object.keys(geneFormErrors).length > 0) {
 			errorToast(errorMessages.emptyFormError);
 			document.getElementById(Object.keys(geneFormErrors)[0]).focus();
 		} else {
+			let _position = position - 10;
 			history.push(
-				`/transcripts?species=${species}&gene_symbol=${gene_symbol}&position=${option === "tenth_left" ? 10: position}&amino_acid_letter=${amino_acid_letter}`
+				`/transcripts?species=${species}&gene_symbol=${gene_symbol}&position=${
+					option === "tenth_left" ? _position : position
+				}&amino_acid_letter=${amino_acid_letter}`
 			);
 		}
 	};
 
 	isDisabled = () => {
-		const {
-			species,
-			gene_symbol,
-			amino_acid_letter,
-			errors,
-		} = this.state;
+		const { species, gene_symbol, amino_acid_letter, errors } = this.state;
 		return (
 			!species ||
 			!gene_symbol ||
@@ -130,7 +149,7 @@ class GeneSymbolContainer extends Component {
 								aria-label="position"
 								name="controlled-radio-buttons-group"
 								row
-								value={option ? option : 'anywhere'}
+								value={option ? option : "anywhere"}
 								onChange={(event) => {
 									this.handleChange("option", event.target.value);
 								}}
@@ -152,8 +171,7 @@ class GeneSymbolContainer extends Component {
 							id="position"
 							property="position"
 							placeholder="Position"
-							value={option === "tenth_left" ? 10 : position}
-							disabled={option === "tenth_left"}
+							value={position}
 							onChange={({ value }) => {
 								this.handleChange("position", value);
 							}}

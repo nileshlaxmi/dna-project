@@ -25,9 +25,9 @@ export const validateRequired = value =>
 export const validateMinLength = (value, minLength) => {
   try {
     if (typeof value === 'number') {
-      if (!minLength || value >= minLength) return true;
+      if (value >= minLength) return true;
     } else {
-      if (!minLength || value.trim().length >= minLength) return true;
+      if (value.trim().length >= minLength) return true;
     }
   } catch (e) {
     console.error('exception in validateMinLength ', JSON.stringify(e));

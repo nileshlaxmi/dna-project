@@ -1,4 +1,4 @@
-import { validateRequired } from "./common";
+import { validateRequired, validateMinLength } from "./common";
 import errorMessages from "constants/errorMessages";
 
 export const defaultValidation = {
@@ -12,10 +12,16 @@ export const defaultValidation = {
 			return errorMessages.blank("Gene Symbol");
 		}
 	},
-	position: ({ value }) => {
-		if (!validateRequired(value)) {
-			return errorMessages.blank("Position");
-		}
+	position: ({ property, value }) => {
+		if(property === "tenth_left"){
+      if (!validateMinLength(value, 10)) {
+        return errorMessages.minLengthReached("Position", 10);
+      }
+    } else {
+      if (!validateMinLength(value, 0)) {
+        return errorMessages.minLengthReached("Position", 0);
+      }
+    }
 	},
 	amino_acid_letter: ({ value }) => {
 		if (!validateRequired(value)) {
