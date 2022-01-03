@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './style.scss';
-import errorIcon from '../../../../assets/images/icon-error.svg';
 
 class RenderInput extends Component {
   static defaultProps = {

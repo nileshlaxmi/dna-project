@@ -116,7 +116,10 @@ class GeneSymbolContainer extends Component {
 			<div className="gene-symbol-form">
 				<form className="gene-symbol-form__inner" onSubmit={this.submit}>
 					<div className="gene-symbol-form__body">
-						<div className="gene-symbol-form__body--small">
+						<div
+							className="gene-symbol-form__body--small"
+							data-testid="home-page-text"
+						>
 							{CONSTANTS.homePageText}
 						</div>
 						<RenderInput

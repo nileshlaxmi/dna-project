@@ -3,8 +3,6 @@ import { render, cleanup, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect';
 import CustomTableRow from '../index';
 import renderWithRouterAndRedux from 'utils/testUtils';
-// import editIcon from 'assets/images/timon.png'
-
 
 const rowIndex = 0;
 
