@@ -28,6 +28,7 @@ const setTranscriptsList = (transcripts) => {
 		let _position = Number(position);
 		const char = seq.charAt(_position ? _position - 1 : 0);
 		if (char === amino_acid_letter.toUpperCase()) return sequence;
+		else return []
 	});
 	return list || [];
 };
